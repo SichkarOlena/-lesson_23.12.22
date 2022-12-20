@@ -1,0 +1,40 @@
+li {
+    list-style-type: none;
+}
+a {
+    position: absolute;
+    color: #484848;
+    font-size: 1.25rem;
+    text-decoration: none;
+    margin-top: 50px;
+    background: orange;
+}
+.menu_link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    width: 3%;
+    height: 10px;
+    background-color: rebeccapurple;
+    transition: width 0.35s;
+}
+
+.menu_link::after {
+    content: ' ';
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+    width: 3%;
+    height: 10px;
+    background-color: red;
+    transition: width 0.35s;
+    top:-20px;
+}
+
+a:hover:before {
+    width: 100%;
+}
+a:hover:after {
+    width: 100%;
+}
